@@ -19,7 +19,10 @@ var init = function(){
 };
 
 exports.getLevel = function(){
-    var res = db.get("SELECT value FROM game_info WHERE name = 'level'");
-    return res;
+    return new Promise(function(resolve) {
+        var res = db.get("SELECT value FROM game_info WHERE name = 'level'", [], function(err, res){
+            resolve(res.value);
+        });
+    });
 };
 init();

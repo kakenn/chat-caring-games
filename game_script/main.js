@@ -3,6 +3,9 @@ exports.textChecker= function(channelId, text){
 
     //slack.self.name
     if(text.match(/mame_test レベルアップ/)){
-        channel.send("レベルアップしたワン！" + database.getLevel() + "になったワン！");
+        co(function* (){
+            res = yield database.getLevel();
+            channel.send("レベルアップしたワン！" + res + "になったワン！");
+        });
     }
 }
