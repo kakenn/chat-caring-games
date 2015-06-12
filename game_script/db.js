@@ -8,8 +8,13 @@ console.log("run: "+db_Flag);
 
 
 
+//データベースがあるかどうかを確認
 var init = function(){
+
+    //DBファイルがあるかどうか
     if(!db_Flag){
+
+        //なければ初期データを作成
         db.serialize(function(){
             db.run("CREATE TABLE game_info (name TEXT, value TEXT)");
             db.run("INSERT INTO game_info VALUES ('level', '1')");
@@ -18,6 +23,10 @@ var init = function(){
     }
 };
 
+
+/*
+    現在のレベルを取得
+*/
 exports.getLevel = function(){
     return new Promise(function(resolve) {
         var res = db.get("SELECT value FROM game_info WHERE name = 'level'", [], function(err, res){
