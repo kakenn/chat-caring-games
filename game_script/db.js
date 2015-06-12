@@ -18,6 +18,7 @@ var init = function(){
         db.serialize(function(){
             db.run("CREATE TABLE game_info (name TEXT, value TEXT)");
             db.run("INSERT INTO game_info VALUES ('level', '1')");
+            db.run("INSERT INTO game_info VALUES ('experience', '0')");
         });
 
     }
