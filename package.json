@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/kakenn/chat-caring-games/issues"
   },
-  "homepage": "https://github.com/kakenn/chat-caring-games"
+  "homepage": "https://github.com/kakenn/chat-caring-games",
+  "dependencies": {
+    "slack-client": "^1.4.1"
+  }
 }
