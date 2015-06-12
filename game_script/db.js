@@ -20,7 +20,6 @@ var init = function(){
 
 exports.getLevel = function(){
     var res = db.get("SELECT value FROM game_info WHERE name = 'level'");
-    console.log(res);
     return res;
 };
 init();
