@@ -1,5 +1,6 @@
 var Slack = require('slack-client');
 var game = require('./game_script/main.js');
+database = require('./game_script/db.js');
 //BOT_TOKEN
 var token = process.env.NODE_SLACK_TOKEN || "xxxx-0000000000-0000000000-0000000000-000000";
 var autoReconnect = true;
