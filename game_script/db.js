@@ -19,7 +19,7 @@ var init = function(){
             db.run("CREATE TABLE game_info (name TEXT, value TEXT)");
             db.run("INSERT INTO game_info VALUES ('level', '1')");
         });
-        console.log("init");
+
     }
 };
 
@@ -28,8 +28,15 @@ var init = function(){
     現在のレベルを取得
 */
 exports.getLevel = function(){
+    return co(function* (){
+        res = yield get('level');
+        return res;
+    });
+};
+
+var get = function(name){
     return new Promise(function(resolve) {
-        var res = db.get("SELECT value FROM game_info WHERE name = 'level'", [], function(err, res){
+        var res = db.get("SELECT value FROM game_info WHERE name = '"+ name +"'", [], function(err, res){
             resolve(res.value);
         });
     });
