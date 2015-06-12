@@ -1,10 +1,17 @@
+var character = require('./character.js');
+
 exports.textChecker= function(channelId, text){
     channel = slack.getChannelGroupOrDMByID(channelId);
 
     //slack.self.name
-    if(text.match(/mame_test レベルアップ/)){
-        database.getLevel().then(function(val){
-            channel.send("レベルアップしたワン！" + val + "になったワン！");
+    if(text.match(/mame_test status/)){
+        co(function* (){
+            var status = yield character.getStatus();
+            channel.send('レベル:' + status.level + "\n経験値:"+status.experience);
         });
     }
+};
+
+function add_experience(num){
+
 }

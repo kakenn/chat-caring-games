@@ -26,6 +26,30 @@ var init = function(){
 
 
 /*
+    現在のステータスを取得
+*/
+exports.getStatus = function(){
+    return co(function*(){
+        res = yield {
+                level:get('level'),
+                experience:get('experience'),
+        };
+        return res;
+    });
+};
+
+/*
+    現在の経験値を取得
+*/
+exports.getExperience = function(){
+    return co(function* (){
+        res = yield get('experience');
+        return res;
+    });
+};
+
+
+/*
     現在のレベルを取得
 */
 exports.getLevel = function(){
@@ -34,6 +58,7 @@ exports.getLevel = function(){
         return res;
     });
 };
+
 
 var get = function(name){
     return new Promise(function(resolve) {

@@ -17,9 +17,6 @@ var autoMark = true;
 //スラック
 slack = new Slack(token, autoReconnect, autoMark);
 
-//データベース(Sqlite3)
-database = require('./game_script/db.js');
-
 //CO(非同期を同期にする用のLibrary)
 co = require('co');
 
