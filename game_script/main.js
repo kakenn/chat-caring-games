@@ -11,7 +11,3 @@ exports.textChecker= function(channelId, text){
         });
     }
 };
-
-function add_experience(num){
-
-}

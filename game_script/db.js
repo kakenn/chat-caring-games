@@ -67,4 +67,13 @@ var get = function(name){
         });
     });
 };
+
+
+var set = function(name, value){
+    return new Promise(function(resolve) {
+        var res = db.run("UPDATE game_info SET value = '"+ value +"' WHERE name = '"+ name +"'", [], function(err, res){
+            resolve(res.value);
+        });
+    });
+};
 init();
