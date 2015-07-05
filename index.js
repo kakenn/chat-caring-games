@@ -17,9 +17,6 @@ var autoMark = true;
 //スラック
 slack = new Slack(token, autoReconnect, autoMark);
 
-//CO(非同期を同期にする用のLibrary)
-co = require('co');
-
 
 
 
@@ -29,13 +26,13 @@ co = require('co');
 
 //Slackとつながった時
 slack.on('open',function(){
-
     //とりあえずBOTが入っているchannelを吐いてる
     for(var element in slack.channels){
         if(slack.channels[element].is_member == true){
             console.log(slack.channels[element].id + " : " + slack.channels[element].name);
         }
     }
+    game.init();
 
 });
 
