@@ -1,5 +1,5 @@
 var Slack = require('slack-client');
-var game = require('./game_script/main.js');
+var game = require('./lib/main.js');
 //BOT_TOKEN
 
 
