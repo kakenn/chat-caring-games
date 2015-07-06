@@ -24,6 +24,7 @@
   "homepage": "https://github.com/kakenn/chat-caring-games",
   "dependencies": {
     "co": "^4.5.4",
+    "cron": "^1.0.9",
     "slack-client": "^1.4.1",
     "sqlite3": "^3.0.8"
   }
