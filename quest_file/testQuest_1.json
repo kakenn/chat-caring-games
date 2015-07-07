@@ -1,0 +1,13 @@
+{
+  "name": "旅の始まり",
+  "summary": "スライムを三体退治せよ！",
+  "necessary_ms": 180000,
+  "reward": {
+    "min_exp": 200,
+    "max_exp": 500,
+    "Item": [
+      1,
+      0
+    ]
+  }
+}
