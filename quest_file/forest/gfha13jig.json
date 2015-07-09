@@ -1,0 +1,14 @@
+{
+  "id": 5,
+  "name": "森のクエスト3",
+  "summary": "すらりんを三体退治せよ！",
+  "necessary_ms": 180000,
+  "reward": {
+    "min_exp": 900,
+    "max_exp": 1200,
+    "Item": [
+      3,
+      9
+    ]
+  }
+}

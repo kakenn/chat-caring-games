@@ -1,0 +1,14 @@
+{
+  "id": 3,
+  "name": "森のクエスト1",
+  "summary": "スライムを四体退治せよ！",
+  "necessary_ms": 180000,
+  "reward": {
+    "min_exp": 200,
+    "max_exp": 500,
+    "Item": [
+      1,
+      6
+    ]
+  }
+}

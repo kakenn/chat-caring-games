@@ -1,0 +1,15 @@
+{
+  "id": 7,
+  "name": "城クエスト2",
+  "summary": "王様を救出せよ！",
+  "necessary_ms": 300000,
+  "reward": {
+    "min_exp": 700,
+    "max_exp": 900,
+    "Item": [
+      1,
+      5,
+      8
+    ]
+  }
+}
