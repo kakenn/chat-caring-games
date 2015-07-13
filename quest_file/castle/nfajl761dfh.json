@@ -1,0 +1,14 @@
+{
+  "id": 6,
+  "name": "城クエスト1",
+  "summary": "城を防衛せよ！",
+  "necessary_ms": 270000,
+  "reward": {
+    "min_exp": 400,
+    "max_exp": 500,
+    "Item": [
+      1,
+      4
+    ]
+  }
+}
