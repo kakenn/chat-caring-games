@@ -1,0 +1,14 @@
+{
+  "id": 0,
+  "name": "旅のテスト",
+  "summary": "バグを退治したい…",
+  "necessary_ms": 10000,
+  "reward": {
+    "min_exp": 200,
+    "max_exp": 500,
+    "Item": [
+      1,
+      0
+    ]
+  }
+}
